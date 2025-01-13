@@ -1,0 +1,7 @@
+# ninja log v5
+1	13678	1693553877279527302	/home/luzhicheng/Code/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/simple_knn.o	e5e6247ff2250b97
+0	17970	1693553881555494310	/home/luzhicheng/Code/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/ext.o	df9d02eda92aee66
+1	49313	1693553912915254147	/home/luzhicheng/Code/gaussian-splatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/spatial.o	517fc0a46f074995
+1	12259	1697525807379174839	/home/luzhicheng/code/Dynamic_Gaussian/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/simple_knn.o	f9fe210419d972ae
+1	21564	1697525816667124532	/home/luzhicheng/code/Dynamic_Gaussian/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/ext.o	42cc8778940bf57
+1	47475	1697525842594984596	/home/luzhicheng/code/Dynamic_Gaussian/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/spatial.o	2b858d6966c2a950
