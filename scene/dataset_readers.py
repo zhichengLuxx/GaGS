@@ -400,13 +400,16 @@ def readCamerasFromTransformsDynamicSynthetic(path, transformsfile, white_backgr
 
             # NeRF 'transform_matrix' is a camera-to-world transform
             c2w = np.array(frame["transform_matrix"])
-            # change from OpenGL/Blender camera axes (Y up, Z back) to COLMAP (Y down, Z forward)
-            c2w[:3, 1:3] *= -1
-
-            # get the world-to-camera transform and set R, T
-            w2c = np.linalg.inv(c2w)
-            R = np.transpose(w2c[:3,:3])  # R is stored transposed due to 'glm' in CUDA code
-            T = w2c[:3, 3]
+            
+            axis_align = np.diag([1, -1, -1, 1])
+            c2w_colmap = c2w @ axis_align
+            w2c_colmap = np.linalg.inv(c2w_colmap)
+            R_colmap = w2c_colmap[:3, :3]
+            T_colmap = w2c_colmap[:3,  3] 
+            R = R_colmap.T
+            T = T_colmap
+            
+            
 
             image_path = os.path.join(path, cam_name)
             image_name = Path(cam_name).stem
